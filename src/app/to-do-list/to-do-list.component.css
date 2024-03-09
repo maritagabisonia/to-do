@@ -1,0 +1,67 @@
+table {
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  height: 65px;
+}
+tr td{
+   border-top: 3px solid #ffffff; /* Add top border */
+  border-bottom: 1px solid #ffffff; 
+  background-color: rgb(244, 243, 243);
+  height: 60px;
+}
+.taskName{
+  padding: 0px 0px 0px 30px;
+  width: 750px;
+}
+.taskStatus{
+  padding: 0px 0px 0px 0px;
+  width: 550px;
+}
+.updateButton {
+  display: inline-block;
+  background-color: #302d45;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 100%;
+  height: 28px;
+  width: 28px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px;
+  margin-right: 20px;
+}
+.updateButton:hover{
+  background-color:  rgb(255, 220, 50);
+}
+.active{
+  background-color:  rgb(255, 220, 50);
+}
+
+
+.DeleteButton{
+  background-color: rgb(250, 164, 180);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 28px;
+  height: 30px;
+  width: 110px;
+  border: none;
+  outline: none;
+  padding: 0px;
+  margin-right: 20px;
+}
+.hidden-checkbox {
+  display: none;
+}
+
+span {
+  padding-left: 10px; 
+  padding-right: 20px;
+}
+.table-container {
+    overflow: hidden; 
+    border-radius: 0 0 40px 40px; 
+  }

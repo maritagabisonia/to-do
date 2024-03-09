@@ -1,0 +1,8 @@
+<div class="container">
+<app-header></app-header>
+<app-alert  *ngIf="toDosService.toDos.length == 0"></app-alert>
+<router-outlet>
+
+</router-outlet>
+<app-to-do-list *ngIf="toDosService.toDos.length !== 0"></app-to-do-list>
+</div>

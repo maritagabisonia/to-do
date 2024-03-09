@@ -1,0 +1,40 @@
+<div class="table-container">
+<table >
+    <thead>
+        <tr>
+            <th style="padding-left: 25px;">მიმდინარე დავალებები</th>
+            <th>სტატუსი</th>
+        </tr>
+    </thead>
+    <tbody>
+         <tr *ngFor = "let toDo of toDosService.undoneToDos"> 
+            <td class="taskName">{{toDo.task}}</td>
+            <td class="taskStatus"><span style="color: hwb(50 20% 0%); font-weight: bolder;" >მიმდინარე</span></td>
+            <td >
+                <a [routerLink]="['/update', toDo.id, toDo.status, toDo.task]"  class="updateButton" >u</a>
+            </td>
+            <td>
+                <button class="DeleteButton"(click)="deleteToDo(toDo)">წაშლა</button>
+            </td>
+          </tr>
+    </tbody>
+</table>    
+<table >  
+    <thead>
+        <tr>
+            <th style="padding-left: 25px;">დასრულებული დავალებები</th>
+        </tr>
+    </thead>
+    <tbody>
+          <tr *ngFor = "let toDo of toDosService.doneToDos"> 
+            <td class="taskName">{{toDo.task}}</td>
+            <td class="taskStatus"><span style="color: rgb(0, 250, 220); font-weight: bolder">დასრულებული</span></td>
+            <td><a [routerLink]="['/update', toDo.id, toDo.status, toDo.task]"  class="updateButton">u</a></td>
+            <td><button class="DeleteButton"(click)="deleteToDo(toDo)">წაშლა</button></td>
+          </tr>
+     </tbody>
+</table>
+</div>
+
+
+

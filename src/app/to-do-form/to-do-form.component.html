@@ -1,0 +1,23 @@
+
+<div  class="form"  [ngClass]="{'form-with-todos': toDosService.toDos.length !== 0, 'form-without-todos': toDosService.toDos.length === 0}">
+
+    <h5 class="text" [ngClass]="{'top': toDosService.toDos.length === 0, 'left': toDosService.toDos.length !== 0}">ახალი დავალების დამატება</h5>
+
+    <form class="info"#toDoForm = "ngForm"[ngClass]="{'bottom': toDosService.toDos.length === 0, 'right': toDosService.toDos.length !== 0}">
+
+        <div class="inputTask" >
+           <label for="tname" class="inputLabel" >შეიყვანეთ დასახელება</label><br>
+           <input class="inputName"id="tname" type="text"  [(ngModel)]="task" name="task" ngModel required/>
+        </div>
+
+        <div class="dropdown">
+            <button>აირჩიეთ დავალების სტატუსი</button>
+            <div class="content">
+                <a href="#" (click)="setStatus(false)" style="color: hwb(50 20% 0%); font-weight: bolder; font-size: smaller;">მიმდინარე სტატუსი</a>
+                <a href="#" (click)="setStatus(true)" style="color: rgb(0, 250, 220); font-weight: bolder; font-size: smaller;" >დასრულებული სტატუსი</a>
+            </div>
+        </div>
+
+        <button (click)="addTask(toDoForm)" [disabled]="!toDoForm.valid">+  დამატება</button>
+    </form>
+</div>

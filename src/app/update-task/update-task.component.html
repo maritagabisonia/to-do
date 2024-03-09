@@ -1,0 +1,17 @@
+<div >
+       <form #updateForm = "ngForm" class="form">
+        <h5 class="text">დავალების რედაქტირება</h5>
+         <div style="display: inline-block; vertical-align: top;">
+           <label for="tname" class="inputLabel" >შეცვალეთ დასახელება</label><br>
+           <input class="inputName"id="tname" type="text" placeholder="update task" [(ngModel)]="updated" name="updated"/>
+        </div>
+        <div class="dropdown">
+            <button>აირჩიეთ დავალების სტატუსი</button>
+            <div class="content">
+                <a href="#" (click)="setStatus(false, $event)" style="color: hwb(50 20% 0%); font-weight: bolder; font-size: smaller;">მიმდინარე სტატუსი</a>
+                <a href="#" (click)="setStatus(true, $event)" style="color: rgb(0, 250, 220); font-weight: bolder; font-size: smaller;" >დასრულებული სტატუსი</a>
+            </div>
+        </div>
+        <button style="margin-top: 23px;" (click)="updateTask(updateForm)" [disabled]="!updateForm.valid">რედაქტირება</button>
+    </form>
+</div>

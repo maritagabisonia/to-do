@@ -1,0 +1,23 @@
+.alert{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgb(245, 241, 241);
+    padding: auto;
+    height: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.alert h4 {
+    margin: 0; 
+    color: rgb(247, 161, 176);
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.alert h5 {
+    margin: 0; 
+}
